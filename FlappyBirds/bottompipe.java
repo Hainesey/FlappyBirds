@@ -8,8 +8,6 @@ import greenfoot.*;
  */
 public class bottompipe extends Actor
 {
-    Actor bottompipe;
-
     /**
      * Act - do whatever the bottompipe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,8 +15,5 @@ public class bottompipe extends Actor
     public void act() 
     {
         move(-3);
-       
-        
-       }  
-      
-    }
+    }  
+}

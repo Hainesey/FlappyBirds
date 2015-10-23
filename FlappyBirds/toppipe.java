@@ -8,8 +8,6 @@ import greenfoot.*;
  */
 public class toppipe extends Actor
 {
-  int point = 0;
-
     /**
      * Act - do whatever the toppipe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,14 +15,8 @@ public class toppipe extends Actor
     public void act() 
     {
         move(-3);
-         if(getX() == 100){
-            
-             point = point + 1;
-        
-             
-        }
-      }      
-    }
+    }      
+}
  
 
 

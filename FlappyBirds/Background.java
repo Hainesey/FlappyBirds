@@ -8,9 +8,6 @@ import greenfoot.*;
  */
 public class Background extends World
 {
-
-   public static int point = 0;
-    
     /**
      * Constructor for objects of class Background.
      * 
@@ -18,11 +15,7 @@ public class Background extends World
     public Background()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600 , 400, 1, false); 
-        
-       
-
-        
+        super(600 , 400, 1, false);
         prepare();
     }
 
@@ -40,43 +33,26 @@ public class Background extends World
         bottompipe bottompipe = new bottompipe();
         addObject(bottompipe, 498, 396);
         toppipe.setLocation(496, 4);
-
-
-        
     }
+    
     int pipeTimer = Greenfoot.getRandomNumber(2000)+1000;
     long lastAdded = System.currentTimeMillis();
     public void act()
     {   
-    pipeSpawn();
-    
-    
-}
+        pipeSpawn();
+    }
 
-public void pipeSpawn() {
-    
+    public void pipeSpawn() {
         long curTime  = System.currentTimeMillis();
-       if (curTime >= lastAdded + pipeTimer) 
-    {
-        int y = Greenfoot.getRandomNumber(150)-100;
-        addObject(new toppipe(),getWidth(),y);
-        addObject(new bottompipe(),getWidth(),y+400);
-     
+        if (curTime >= lastAdded + pipeTimer) 
+        {
+            int y = Greenfoot.getRandomNumber(150)-100;
+            addObject(new toppipe(),getWidth(),y);
+            addObject(new bottompipe(),getWidth(),y+400);
         
-        lastAdded  = curTime;
-
-       
-        
+            lastAdded  = curTime;
+        } 
     }
-    
-}
-
-public void removePipe() {
-    
-    if(point = point + 1) {
-        removeObject(toppipe, bottompipe);
-    }
-}
 }
 
  
